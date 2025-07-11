@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PPE Detection - AI Surveillance</title>
+</head>
+<body>
+  <h1>👷 AI-Powered PPE Surveillance System</h1>
+
+  <h3>📸 Upload an Image</h3>
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" name="image" accept="image/*" required>
+    <input type="submit" value="Detect PPE">
+  </form>
+
+  <h3>📡 Start Live Camera Detection</h3>
+  <form action="/live" method="get">
+    <button type="submit">Start Live Feed</button>
+  </form>
+
+  <hr>
+  <p>🔍 Violations are logged inside <code>/violations</code> folder.</p>
+</body>
+</html>
