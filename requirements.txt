@@ -4,3 +4,4 @@ opencv-python==4.8.0.76
 torch==2.0.1
 torchvision==0.15.2
 playsound==1.2.2
+gunicorn
