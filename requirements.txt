@@ -1,5 +1,13 @@
+<<<<<<< HEAD
 ultralytics
 opencv-python
 torch
 torchvision
 playsound
+=======
+ultralytics
+opencv-python
+torch
+torchvision
+playsound
+>>>>>>> 071c11b59a9459789fd1de45b18a18a159a94253
