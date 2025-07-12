@@ -18,6 +18,9 @@ def upload_image():
         return "No image uploaded.", 400
 
     image = request.files['image']
+    if image.filename == '':
+        return "No file selected.", 400
+
     filename = secure_filename(image.filename)
     path = os.path.join(app.config['UPLOAD_FOLDER'], filename)  
     image.save(path)
@@ -35,6 +38,6 @@ def serve_file(path):
     return send_from_directory('.', path)
 
 if __name__ == "__main__":
-    # Required for Render deployment — binds to the correct port
+    # For local testing
     port = int(os.environ.get("PORT", 10000))
     app.run(host='0.0.0.0', port=port)
