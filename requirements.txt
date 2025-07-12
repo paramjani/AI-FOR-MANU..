@@ -1,5 +1,6 @@
-ultralytics
-opencv-python
-torch
-torchvision
-playsound
+flask==2.1.2
+ultralytics==8.0.20
+opencv-python==4.8.0.76
+torch==2.0.1
+torchvision==0.15.2
+playsound==1.2.2
