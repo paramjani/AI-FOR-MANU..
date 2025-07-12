@@ -19,7 +19,7 @@ def upload_image():
 
     image = request.files['image']
     filename = secure_filename(image.filename)
-    path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+    path = os.path.join(app.config['UPLOAD_FOLDER'], filename)  
     image.save(path)
 
     result_path = process_uploaded_image(path)
@@ -35,4 +35,6 @@ def serve_file(path):
     return send_from_directory('.', path)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    # Required for Render deployment — binds to the correct port
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host='0.0.0.0', port=port)
